@@ -7,16 +7,18 @@ from ConverDef.conversor_longitud.metros import conversor_m_k, conversor_m_p, co
 from ConverDef.conversor_longitud.kilometros import conversor_km_m, conversor_km_mi, conversor_km_p
 from ConverDef.conversor_longitud.pies import conversor_p_m, conversor_p_km, conversor_p_mi
 from ConverDef.conversor_longitud.millas import conversor_mi_m, conversor_mi_km, conversor_mi_p
-
+import datetime
 
 print("\n=========================")
 print("Sistema de Conversiones")
 print("=========================")
+historyTable = {}
 while True:
     print(
         "\nOPCIONES: \n"
         "1. Conversor de Temperaturas\n"
         "2. Conversor de Longitudes\n"
+        "3. Ver Historial\n"
         "0. Cerrar Sistema\n"
     )
     entrada = int(input("Seleccione una Opción: "))
@@ -132,6 +134,9 @@ while True:
                 break
             else:
                 print("Seleccione una opción valida")
+        historyTable = {'tipo': entrada, 'fecha': datetime.datetime}
+    elif entrada == 3:
+        print(historyTable['tipo'])
     elif entrada == 0:
         print("Adios!")
         exit()

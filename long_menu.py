@@ -1,7 +1,7 @@
 print(
     "\nLongitudes\n"
     "========================\n"
-    "OPCIONES: \n"
+    f"\033[96mOPCIONES: \n\033[0m"
     "1. Mt a Km\n"
     "2. Mt a Pie\n"
     "3. Mt a Mi\n"

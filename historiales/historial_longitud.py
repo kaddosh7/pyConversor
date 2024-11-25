@@ -16,7 +16,7 @@ def show_long_conversions():
         print(f'{i}.- Conversion {entradas}, Resultados: {results["Resultado"]}, Fecha:{results["Fecha"]}')
 
 
-def export_csv_long_conversions(file_name='long_conversions.csv'):
+def export_csv_long_conversions(file_name='historiales/his_docs/long_conversions.csv'):
     with open(file_name, mode='w', newline='', encoding='utf-8') as long_conversions:
         write_history = csv.writer(long_conversions)
         write_history.writerow(['Longitud', 'Resultado', 'Fecha'])

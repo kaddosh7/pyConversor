@@ -1,7 +1,7 @@
 print(
     "\nTemperaturas\n"
     "========================\n"
-    "OPCIONES: \n"
+    f"\033[96mOPCIONES: \n\033[0m"
     "1. °C a °F\n"
     "2. °C a °K\n"
     "3. °F a °C\n"

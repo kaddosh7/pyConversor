@@ -9,7 +9,8 @@ from ConverDef.conversor_longitud.pies import conversor_p_m, conversor_p_km, con
 from ConverDef.conversor_longitud.millas import conversor_mi_m, conversor_mi_km, conversor_mi_p
 
 from datetime import datetime
-from datetime import date
+
+import colorsys as cs
 
 import csv
 
@@ -23,13 +24,13 @@ historiaLongitudes = {}
 all_history = {}
 
 print("\n=========================")
-print("Sistema de Conversiones")
+print(f"\033[34mSISTEMA DE CONVERSIONES\033[0m")
 print(datetime.now())
 print("=========================")
 
 while True:
     print(
-        "\nOPCIONES: \n"
+        f"\n\033[96mOPCIONES: \n\033[0m"
         "1. Conversor de Temperaturas\n"
         "2. Conversor de Longitudes\n"
         "3. Historial de Temperaturas\n"
@@ -87,10 +88,10 @@ while True:
                 all_history[inputNum] = allConv.data_added(inputNum, kf_result, datetime.now())
                 print(inputNum, "°F =", kf_result.format(k_f))
             elif op == 0:
-                print("Hasta Luego!")
+                print("Hasta Luego! \U0001F44B")
                 break
             else:
-                print("Selccione una opción valida")
+                print("Selccione una opción valida \U0000274C")
     elif entrada == 2:
         import long_menu
         # mts a km
@@ -187,25 +188,25 @@ while True:
                 print("Hasta Luego!")
                 break
             else:
-                print("Seleccione una opción valida")
+                print("Seleccione una opción valida \U0000274C")
     elif entrada == 3:
         print("Historial de Temperaturas")
         hisTemp.show_temp_conversions()
     elif entrada == 4:
         hisTemp.export_csv_temp_conversions()
-        print("Historial exportado!")
+        print("Historial exportado! \U00002705 ")
 
     elif entrada == 5:
         print("Historial de Longitudes")
         hisLong.show_long_conversions()
     elif entrada == 6:
         hisLong.export_csv_long_conversions()
-        print("Historial exportado!")
+        print("Historial exportado!  \U00002705")
     elif entrada == 7:
         allConv.export_csv_all_conversions()
-        print("Historial completo exportado!")
+        print("Historial completo exportado!  \U00002705")
     elif entrada == 0:
-        print("Adios!")
+        print("Adios! \U0001F44B")
         exit()
     else:
-        print("Seleccione una opción válida")
+        print("Seleccione una opción válida \U0000274C")

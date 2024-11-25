@@ -8,7 +8,7 @@ def data_added(entradas, resultado, fecha):
     return historial
 
 
-def export_csv_all_conversions(file_name='all_conversions.csv'):
+def export_csv_all_conversions(file_name='historiales/his_docs/all_conversions.csv'):
     with open(file_name, mode='w', newline='', encoding='utf-8') as all_conversions:
         write_history = csv.writer(all_conversions)
         write_history.writerow(['Datos', 'Resultados', 'Fechas'])
